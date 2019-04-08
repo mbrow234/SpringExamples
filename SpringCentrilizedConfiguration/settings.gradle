@@ -1,0 +1,4 @@
+rootProject.name = 'SpringCentrilizedConfiguration'
+include 'configuration-service'
+include 'configuration-client'
+

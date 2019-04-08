@@ -1,0 +1,4 @@
+rootProject.name = 'SpringServiceRegistration'
+include 'eureka-service'
+include 'eureka-client'
+

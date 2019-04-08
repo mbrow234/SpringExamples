@@ -1,0 +1,22 @@
+package hello;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.query.Param;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+
+import java.util.List;
+
+/**
+ *
+ *
+ * @author Michael Brown (Michael.Brown@consensuscorp.com)
+ * @since 1/15/18.
+ * <p>
+ * All rights reserved. (C) Consensus Corporation
+ */
+@RepositoryRestResource(collectionResourceRel = "people", path = "people")
+public interface PersonRepository extends CrudRepository<Person, Long> {
+
+    List<Person> findByLastName(@Param("name") String name);
+
+}
